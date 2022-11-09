@@ -16,7 +16,7 @@ The GUI displays the available chat rooms (two are preloaded) and their current 
 3. Lunch the web server: ```python3 webserver.py```
 4. Open a web browser (both Chrome and Firefox have been tested and work) and type ```127.0.0.1:50000``` into the address bar.
 5. You should now see the chat app GUI.
-[!](assets/images/GUI_screenshot.png)
+![GUI screenshot](assets/images/GUI_screenshot.png)
 
 
 ## Testing
