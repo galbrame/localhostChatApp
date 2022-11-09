@@ -1,0 +1,154 @@
+/*---------------------------------------------------------
+ NAME: Megan Galbraith
+ STUDENT NUMBER: 6795920
+ COURSE: COMP 4300
+ ASSIGNMENT: Assignment 1
+ 
+ REMARKS: The style sheet for the webpages.
+----------------------------------------------------------*/
+
+/*---------MAIN STYLES--------*/
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    align-items: right;
+}
+body {
+    /* background: #F3E9D2; */
+    background: rgb(249, 222, 201);
+    color: #343434;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+a {
+    color: #06BCC1;
+}
+a:hover {
+    text-decoration: none;
+}
+.content-wrapper {
+    max-width: 1000px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+
+/*--------NAV---------*/
+nav {
+    /* background: #06BCC1; */
+    background-image: linear-gradient(rgb(146, 5, 246), rgb(26, 235, 242), rgb(249, 222, 201));
+    width: 100%;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    text-align: left;
+    transition: all 0.9s ease-in-out 0s;
+    padding: 50px 20px;
+    margin: -10px;
+}
+nav a {
+    color: #343434;
+    /* background: #DEC0F1; */
+    background-image: radial-gradient(rgb(249, 222, 201), rgb(221, 96, 49));
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+nav a:hover {
+    /* background: rgba(222, 192, 241, 80%); */
+    background-image: radial-gradient(rgba(249, 222, 201, 80%), rgba(221, 96, 49, 80%));
+    padding: 13px 22px;
+}
+
+
+/*--------FOOTER--------*/
+footer {
+    background: #6f6f6f;
+    color: #F7FFF7;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    width: 100%;
+    padding: 10px;
+    margin: 0 -10px;
+    position: fixed;
+    bottom: 0;
+}
+.footer-left {
+    text-align: left;
+    /* position: fixed; */
+    left: 0;
+}
+.footer-right {
+    text-align: right;
+    position: fixed;
+    right: 0;
+    padding: 0 20px;
+}
+
+
+/*--------FIGURES--------*/
+figure {
+    display: inline-block;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+figcaption {
+    /* background: white; */
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 5px;
+}
+.fig-centre {
+    text-align: left;
+    margin: auto 30px;
+}
+
+
+/*--------BUTTONS--------*/
+button {
+    /* background-image: radial-gradient(rgb(26, 235, 242), rgb(146, 5, 246)); */
+    background: rgb(26, 235, 242);
+    background-size: 125px;
+    width: 150px;
+    height: 150px;
+    font-size: large;
+    cursor: pointer;
+}
+button:hover {
+    background: rgb(146, 5, 246, 80%);
+}
+
+#createRoom {
+    width: 100px;
+    height: 50px;
+}
+
+
+/*--------IFRAME--------*/
+iframe {
+    background: #d6d6d6;
+    width: 600px;
+    height: 350px;
+}
+
+
+
+#newRoomName, #createRoom {
+    display: inline-block;
+}
+
+
+textarea {
+    width: 150px;
+    height: auto;
+    font-size: medium;
+}
+#userText {
+    width: 550px;
+    height: auto;
+}

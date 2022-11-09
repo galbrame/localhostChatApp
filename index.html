@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head id="head">
+        <meta charset="utf-8">
+        <title>Minimalist Chatter</title>
+        <link rel="stylesheet" href="assets/chatStyles.css">
+        <script src="assets/chatScripts.js"></script>
+        <!--<link type="image/png" sizes="16x16" rel="icon" href="./assets/icons8-speech-bubble-gradient-16.png">-->
+        <link type="image/png" sizes="32x32" rel="icon" href="assets/icons8-topic-gradient-32.png">
+    </head>
+    <body onload="getListOfRooms(), getCSS()">
+
+        <!--NAVIGATION-->
+        
+        <header>
+            <nav>
+                <!--
+                <a href="/~umgalbr0/">
+                    <strong><< </strong>BACK TO MEGAN HOME
+                </a>
+                -->
+            </nav>
+        </header>
+        
+
+        <!--MAIN BODY-->
+        <div class="content-wrapper">
+            <h1>Welcome to Minimalist Chatter</h1>
+            <h3>Please select a chat room<br>or</h3>
+            <textarea id="newRoomName" placeholder="New Room Name"></textarea><button id="createRoom" onclick="createRoom()">Create a new room</button>
+            
+            <p>There is a maximum of <strong>5</strong> users per room.<br>You can change your user name or keep the default.</p>
+            <br>
+            <textarea id="userName" placeholder="Username"></textarea>
+
+            <!--CHAT ROOMS-->
+            <div id="chatRoomList">No chat rooms available. Please create one.</div>
+        </div>
+
+        <!--FOOTER REGION-->
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <footer>
+            <span class="footer-left">All material is copyright Megan Galbraith, Sara Rouhani, and the University of Manitoba (2022)</span>
+            <span class="footer-right"><a target="_blank" href="https://icons8.com/icon/yg_1BRRCDTMO/topic">Topic</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+        </footer>
+    </body>
+</html>
