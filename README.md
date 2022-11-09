@@ -8,6 +8,8 @@ The web server must be running prior to opening the GUI (index.html), as the ser
 
 The GUI displays the available chat rooms (two are preloaded) and their current occupants. Chat rooms are limited to five participants.
 
+NOTE: While basic functionality is present, several features remain to be implemented.
+
 
 ## How to Run
 
