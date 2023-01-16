@@ -28,7 +28,8 @@ PORT = 50000
 CODES = {200: "200 OK", 201: "201 Created", 204: "204 No Content", 400: "400 Bad Request", 
             401: "401 Unauthorized", 404: "404 Not Found", 500: "500 Internal Server Error"}
 TYPES = {"txt": "text/plain", "html": "text/html", "json": "application/json", 
-            "jpeg": "image/jpeg", "png": "image:png"}
+            "jpeg": "image/jpeg", "png": "image:png", "css": "text/css", 
+            "js": "text/javascript"}
 dbName = "chatApp" #can specify in args at runtime for testing purposes
 db = None
 
@@ -144,11 +145,15 @@ def doGET(path, reqHeaders):
         #regular file fetching
         else:
             body = readPath(path)
-            if body.find("<html>"):
-                contentType = TYPES["html"]
-            else:
+
+            # get the Content-Type from the file extension
+            if path != "/":
                 pathParts = path.split(".")
-                contentType = TYPES.get(pathParts[-1])
+                contentType = TYPES[pathParts[-1]]
+
+            # except index.html is often not called by name...
+            elif body.find("<html>") > 0:
+                contentType = TYPES["html"]
 
 
     except HttpException:

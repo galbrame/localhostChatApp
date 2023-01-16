@@ -4,18 +4,14 @@
 * COURSE: COMP 4300
 * ASSIGNMENT: Assignment 1
 * 
-* REMARKS: 
+* REMARKS: The JavaScript powering the chat app browser GUI interactivity.
 *
 *******************************************/
 
-// var WEB_SERVER
-//wait...how does scope work in multiple instances of webpage? Constant overwriting?
-  //I *think* this should be fine...
 var WEB_SERVER = "127.0.0.1:50000"
 var roomList = {}; //js object
 var chatHist = {}; //js object
 var myRequest; //XHR request
-var myCSSRequest; //prevent namespace collision
 var userName = "";
 var timer = 0; //wait, how do I run web timers? Like, how check? Need fire IsModified every X seconds...
 
@@ -102,32 +98,6 @@ function GETRoomsLoadEvent() {
     console.log("Received room list:");
     console.log(roomList);
     buildRoomList();
-}
-
-
-/******************************************
-* cssLoadEvent
-*
-* DESCRIPTION: Fetch and load the stylesheet
-******************************************/
-function cssLoadEvent() {
-    let css = myCSSRequest.responseText;
-    let myHead = document.getElementById("head");
-    myHead.innerHTML = "<style>" + css + "</style>";
-}
-
-
-
-/******************************************
-* getCSS
-*
-* DESCRIPTION: Fetch the CSS and manually load it into the damn html
-******************************************/
-function getCSS() {
-    myCSSRequest = new XMLHttpRequest();
-    myCSSRequest.addEventListener("load", cssLoadEvent);
-    myCSSRequest.open("GET", "assets/chatStyles.css");
-    myCSSRequest.send()
 }
 
 
